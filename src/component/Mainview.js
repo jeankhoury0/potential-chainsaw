@@ -1,12 +1,12 @@
 import Experience from "./utility/Experience";
 import { MainViewHeader } from "./utility/MainViewUtil";
-import Portfolio from "./utility/Portfolio";
+import Portfolio, { PortfolioV2 } from "./utility/Portfolio";
 import SocialLinks from "./utility/SocialLinks";
 import ContactForm from "./utility/ContactForm";
 import RoovedPic from './../media/portfolio/RoovedDemo.png'
 import KarbonCoinPic from './../media/portfolio/KarbonCoin.png'
 import jrPic from './../media/portfolio/JosephRibkoff.png'
-import { Skill, Skills } from "./utility/Skills";
+import { LanguageSkill, Skill, Skills } from "./utility/Skills";
 
 function Mainview() {
     
@@ -34,7 +34,7 @@ function Mainview() {
                     
                     <MainViewHeader title="Portfolio">
                         <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 ">
-                                <Portfolio 
+                                <PortfolioV2 
                                     header="Medical Assessment web app"
                                     description="Frontend development, Knowledge base, Identity, Design"
                                     ctaText="Visit Demo"
@@ -42,8 +42,8 @@ function Mainview() {
                                     href="https://rhuh-callcenter-demo.herokuapp.com/"
                                     tags={["frontend", "identity"]}
                                     >
-                                    </Portfolio>
-                            <Portfolio
+                                    </PortfolioV2>
+                            <PortfolioV2
                                 header="Karbon Coin"
                                 description="Creating website, brand and material. Top finalist of hult Prize regionals"
                                 ctaText="Visit Website"
@@ -51,8 +51,8 @@ function Mainview() {
                                 href="https://karboncoin.com/"
                                 tags={["frontend", "identity", "Website"]}
                             >
-                            </Portfolio>
-                            <Portfolio
+                            </PortfolioV2>
+                            <PortfolioV2
                                 header="Joseph Ribkoff"
                                 description="User Acceptance testing consultant, CMS on
                                 Optimizely (Episerver) "
@@ -62,8 +62,8 @@ function Mainview() {
                                 tags={["Testing"]}
 
                             >
-                            </Portfolio>
-                            <Portfolio
+                            </PortfolioV2>
+                            <PortfolioV2
                                 header="short.001.lat"
                                 description="URL shortner with a twist"
                                 ctaText="Visit Website"
@@ -72,15 +72,15 @@ function Mainview() {
                                 tags={["Node.JS backend", "Rest API"]}
 
                             >
-                            </Portfolio>
-                            <Portfolio
+                            </PortfolioV2>
+                            <PortfolioV2
                                 header="Quick political Compass test"
                                 description={["Simpler version of ", <a href="https://politicalcompass.org/" rel="noreferrer" target="_blank" className="font-bold underline"> political Compass</a> ," to quickly triage people for debates" ]}
                                 ctaText="Visit Website"
                                 src=""
                                 href="https://jeankhoury.com/Quick-Political-Compass-Test/"
                             >
-                            </Portfolio>
+                            </PortfolioV2>
                         </div>
                     </MainViewHeader>
                     <MainViewHeader title="Experience">
@@ -108,7 +108,7 @@ function Mainview() {
 
                             <Skills title="Web development" fa="fas fa-code">
                             <Skill head>Web Frameworks</Skill>
-                            <Skill>Express.js, Django, React <i className="text-secondAccent hover:opacity-75 fab fa-react"></i></Skill>
+                            <Skill>Express.js, Django, React <i className="text-secondAccent hover:text-white fab fa-react"></i></Skill>
                             <Skill head>Templating languages</Skill>
                             <Skill>EJS</Skill>
                             <Skill head>Testing framework</Skill>
@@ -124,7 +124,12 @@ function Mainview() {
                                 <Skill>Adobe Illustrator & Photoshop, Figma</Skill>
                                 <Skill head>Process</Skill>
                                 <Skill>Agile, Dev Ops, User Acceptance testing, Accessibility Audit (Web and PDF)</Skill>
-                               
+                            </Skills>
+                            <Skills title="Languages" fa="fas fa-language" className="container grid grid-cols-2">
+                                <LanguageSkill fa="fab fa-js"></LanguageSkill>
+                                <LanguageSkill fa="fab fa-java"></LanguageSkill>
+                                <LanguageSkill fa="fab fa-python"></LanguageSkill>
+                                <LanguageSkill fa="fa fa-code-branch"></LanguageSkill>
                             </Skills>
                         
                         </div>
