@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.1977c4b0.chunk.css",
+    "main.js": "./static/js/main.f1a10915.chunk.js",
+    "main.js.map": "./static/js/main.f1a10915.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.26dbdce3.js",
+    "runtime-main.js.map": "./static/js/runtime-main.26dbdce3.js.map",
+    "static/js/2.d25d3a80.chunk.js": "./static/js/2.d25d3a80.chunk.js",
+    "static/js/2.d25d3a80.chunk.js.map": "./static/js/2.d25d3a80.chunk.js.map",
+    "static/js/3.c3830a7a.chunk.js": "./static/js/3.c3830a7a.chunk.js",
+    "static/js/3.c3830a7a.chunk.js.map": "./static/js/3.c3830a7a.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.1977c4b0.chunk.css.map": "./static/css/main.1977c4b0.chunk.css.map",
+    "static/js/2.d25d3a80.chunk.js.LICENSE.txt": "./static/js/2.d25d3a80.chunk.js.LICENSE.txt",
+    "static/media/JosephRibkoff.7dab1f53.png": "./static/media/JosephRibkoff.7dab1f53.png",
+    "static/media/KarbonCoin.2bd16479.png": "./static/media/KarbonCoin.2bd16479.png",
+    "static/media/RoovedDemo.6512aa30.png": "./static/media/RoovedDemo.6512aa30.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26dbdce3.js",
+    "static/js/2.d25d3a80.chunk.js",
+    "static/css/main.1977c4b0.chunk.css",
+    "static/js/main.f1a10915.chunk.js"
+  ]
+}
