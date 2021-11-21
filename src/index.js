@@ -4,10 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div className="h-screen">
+
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </div>,
   document.getElementById('root')
 );
 
