@@ -1,6 +1,6 @@
 import Experience from "./utility/Experience";
 import { MainViewHeader } from "./utility/MainViewUtil";
-import Portfolio, { PortfolioV2 } from "./utility/Portfolio";
+import { PortfolioV2 } from "./utility/Portfolio";
 import SocialLinks from "./utility/SocialLinks";
 import ContactForm from "./utility/ContactForm";
 import RoovedPic from './../media/portfolio/RoovedDemo.png'
