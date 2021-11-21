@@ -1,4 +1,9 @@
 ---
 label: Experience
 hide_body: false
-fields: []
+fields:
+- name: naem
+  type: text
+  config:
+    required: false
+  label: name
