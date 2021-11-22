@@ -59,7 +59,9 @@ export function PortfolioV2(props){
             <h3 className="font-bold text-xl px-6 pt-2 group-hover:text-white duration-500"> {props.header}</h3>
             <div className="py-2 px-6">
                 <img src={props.src} className={`${noImage} w-full p-2 group-hover:bg-gray-200`} alt={props.alt || ""}></img>
-                <p className="py-2 px-5  group-hover:text-white"> {props.description} </p>
+                <p className="py-2 px-5  group-hover:text-white"> 
+                    <div dangerouslySetInnerHTML={{ __html: props.description}}>
+                    </div> </p>
                 <div className="py-2">
                     <a href={props.href} rel="noreferrer" target="_blank" className={`${noCTAText} flex p-3 text-center bg-secondAccent text-white hover:bg-mainAccent group-hover:bg-mainAccent transition-colors duration-200 rounded font-semibold`}>
                         {props.ctaText}

@@ -7,6 +7,7 @@ import RoovedPic from './../media/portfolio/RoovedDemo.png'
 import KarbonCoinPic from './../media/portfolio/KarbonCoin.png'
 import jrPic from './../media/portfolio/JosephRibkoff.png'
 import { LanguageSkill, Skill, Skills } from "./utility/Skills";
+import PortfolioReq from "./requestComponent/PortfolioReq";
 
 function Mainview() {
     
@@ -30,58 +31,8 @@ function Mainview() {
                     </div>
                     </MainViewHeader>
 
-                   
-                    
                     <MainViewHeader title="Portfolio">
-                        <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 ">
-                                <PortfolioV2 
-                                    header="Medical Assessment web app"
-                                    description="Frontend development, Knowledge base, Identity, Design"
-                                    ctaText="Visit Demo"
-                                    src={RoovedPic}
-                                    href="https://rhuh-callcenter-demo.herokuapp.com/"
-                                    tags={["frontend", "identity"]}
-                                    >
-                                    </PortfolioV2>
-                            <PortfolioV2
-                                header="Karbon Coin"
-                                description="Creating website, brand and material. Top finalist of hult Prize regionals"
-                                ctaText="Visit Website"
-                                src={KarbonCoinPic}
-                                href="https://karboncoin.com/"
-                                tags={["frontend", "identity", "Website"]}
-                            >
-                            </PortfolioV2>
-                            <PortfolioV2
-                                header="Joseph Ribkoff"
-                                description="User Acceptance testing consultant, CMS on
-                                Optimizely (Episerver) "
-                                ctaText="Visit Website"
-                                src={jrPic}
-                                href="https://josephribkoff.com/"
-                                tags={["Testing"]}
-
-                            >
-                            </PortfolioV2>
-                            <PortfolioV2
-                                header="short.001.lat"
-                                description="URL shortner with a twist"
-                                ctaText="Visit Website"
-                                src=""
-                                href="https://short.001.lat/"
-                                tags={["Node.JS backend", "Rest API"]}
-
-                            >
-                            </PortfolioV2>
-                            <PortfolioV2
-                                header="Quick political Compass test"
-                                description={["Simpler version of ", <a href="https://politicalcompass.org/" rel="noreferrer" target="_blank" className="font-bold underline"> political Compass</a> ," to quickly triage people for debates" ]}
-                                ctaText="Visit Website"
-                                src=""
-                                href="https://jeankhoury.com/Quick-Political-Compass-Test/"
-                            >
-                            </PortfolioV2>
-                        </div>
+                        <PortfolioReq></PortfolioReq>
                     </MainViewHeader>
                     <MainViewHeader title="Experience">
                         <Experience

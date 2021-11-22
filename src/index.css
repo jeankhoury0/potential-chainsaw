@@ -9,6 +9,9 @@
     h3 {
         @apply text-xl font-medium
     }
+    p a{
+        @apply font-bold underline hover:text-mainAccent
+    }
 }
 
 @layer utilities{
