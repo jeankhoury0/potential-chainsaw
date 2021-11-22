@@ -1,11 +1,7 @@
 import Experience from "./utility/Experience";
 import { MainViewHeader } from "./utility/MainViewUtil";
-import { PortfolioV2 } from "./utility/Portfolio";
 import SocialLinks from "./utility/SocialLinks";
 import ContactForm from "./utility/ContactForm";
-import RoovedPic from './../media/portfolio/RoovedDemo.png'
-import KarbonCoinPic from './../media/portfolio/KarbonCoin.png'
-import jrPic from './../media/portfolio/JosephRibkoff.png'
 import { LanguageSkill, Skill, Skills } from "./utility/Skills";
 import PortfolioReq from "./requestComponent/PortfolioReq";
 
