@@ -21,7 +21,7 @@ function Sidebar() {
                             <div>
                                     <div className="text-center bg-white rounded-md shadow-lg m-3 p-2 text-secondAccent">
                                         <picture>
-                                        <source srcset={data.image.webp} type="image/webp"></source>
+                                        <source srcSet={data.image.webp} type="image/webp"></source>
                                               <img src={data.image.png} alt="" className="filter drop-shadow-lg ring-2 ring-secondAccent"></img>
                                         </picture>
                                     <h1 className="text-3xl text-grayAccent font-bold uppercase mt-3"> {data.name} </h1>

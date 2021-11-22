@@ -1,13 +1,10 @@
 function Preloading(){
-    const loadingPage = (<div className="z-10 h-screen sticky w-screen bg-gray-50">
-        <div className="text-center text-4xl font-bold opacity-30 text-secondAccent">
-            Loading...
-        </div>
-    </div>)
 
     return(
-        <div>
-            {loadingPage}
+        <div className=" bottom-0 right-0 top-0 h-screen fixed w-full bg-gray-50 ">
+            <div className="text-center text-6xl font-bold opacity-30 text-secondAccent p-3">
+                Loading...
+            </div>
         </div>
         
     )
