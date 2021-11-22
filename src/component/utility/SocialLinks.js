@@ -27,4 +27,17 @@ function SocialLinks(){
             // <SocialLinksIndiv fontAwesome="fas fa-location-arrow" handle="Montreal, Canada "></SocialLinksIndiv>
     )}
 
+export function SocialLink(props){
+    return (
+        <div className="mt-2 text-secondAccent underline font-medium">
+            <a href={props.req.link} target="_blank" rel="noreferrer">
+                <i className=" text-mainAccent">
+                    <span className={props.req.fa}></span></i>
+                <span className="ml-2">{props.req.title}</span>
+            </a>
+        </div>
+    )
+
+}
+
 export default SocialLinks;
