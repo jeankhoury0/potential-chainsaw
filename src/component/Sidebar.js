@@ -1,5 +1,4 @@
 import { SocialLink } from "./utility/SocialLinks";
-import PhotoJean from "./../media/jean.png" 
 import { Get } from 'react-axios'
 import Preloading from "./utility/Preloading";
 
