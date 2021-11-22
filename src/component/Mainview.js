@@ -1,6 +1,5 @@
 import Experience from "./utility/Experience";
 import { MainViewHeader } from "./utility/MainViewUtil";
-import SocialLinks from "./utility/SocialLinks";
 import ContactForm from "./utility/ContactForm";
 import { LanguageSkill, Skill, Skills } from "./utility/Skills";
 import PortfolioReq from "./requestComponent/PortfolioReq";
@@ -22,9 +21,6 @@ function Mainview() {
                     <p className=" text-justify"> 2nd-year Computer science student, experienced Quality Insurance specialist in Accessibility
                         audit (WCAG) and user acceptance testing. Able to adapt and overcome technical and analytical challenges thanks to my knowledge of programming, math,
                         and business administration. Highly interested in computer science and new technologies.</p>
-                    <div className="rounded-md shadow-lg my-2 py-2 mx-6 text-white lg:hidden">
-                        <SocialLinks></SocialLinks>
-                    </div>
                     </MainViewHeader>
 
                     <MainViewHeader title="Portfolio">

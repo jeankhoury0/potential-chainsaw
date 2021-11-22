@@ -1,6 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "Jean Khoury",
+  "short_name": "Jean Khoury",
+  "lang": "en-CA",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#3AAFA9",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +22,5 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
   "background_color": "#ffffff"
 }
