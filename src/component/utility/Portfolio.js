@@ -1,11 +1,5 @@
 function Portfolio(props) {
     
-    var tagPoints = null;
-    if (props.tags) {
-        tagPoints = (props.tags).map((tag) =>
-            <span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 capitalize">{tag}</span>
-        );
-    }
 
     if (!props.src){
         var noImage  = "hidden"
@@ -28,9 +22,7 @@ function Portfolio(props) {
                     </a>
                 {props.children}
                 </div>
-                <div className ="px-6 pt-4 pb-2">
-                    {tagPoints}
-                </div>
+
             </div>
         </div>
 
@@ -42,8 +34,8 @@ export function PortfolioV2(props){
 
     var tagPoints = null;
     if (props.tags) {
-        tagPoints = (props.tags).map((tag) =>
-            <span key={tag} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 capitalize">{tag}</span>
+        tagPoints = (props.tags).map((tag,index) =>
+            <span key={index} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 capitalize">{tag}</span>
         );
     }
 
