@@ -23,7 +23,7 @@ function Mainview() {
             let data = response.data.data;
             return (
   
-                <div className="">
+                <div>
                     <header className="lg:hidden  sticky top-0">
                         {/* Mobile only */}
                         <div className="text-center p-5 bg-grayAccent shadow-lg  text-secondAccent">
@@ -44,7 +44,8 @@ function Mainview() {
                             </MainViewHeader>
                             <MainViewHeader title="Experience">
                                 {data.experiences.map((xp)=>
-                                    <Experience
+                                    <Experience 
+                                        key={xp}
                                         jobTitle={xp.jobTitle}
                                         companyName={xp.company}
                                         startYear={xp.startDate}

@@ -29,8 +29,8 @@ function Sidebar() {
                                     </div>
                                     <div className="bg-white rounded-md  m-3 p-5">
                                         <h2 className="text-xl text-center text-grayAccent font-bold uppercase">Follow me</h2>                                    
-                                        {data.socialLinks.map((sl)=>
-                                            <SocialLink req={sl}> </SocialLink>
+                                        {data.socialLinks.map((sl, index)=>
+                                            <SocialLink key={index} req={sl}> </SocialLink>
                                         )}
                                     </div>
                                     {/* <a href="#contact" className="bg-secondAccent p-6 self-center text-center  mt-1 text-l font-medium rounded text-white hover:bg-grayAccent transition-colors">

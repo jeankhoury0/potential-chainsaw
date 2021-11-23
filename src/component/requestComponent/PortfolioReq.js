@@ -16,8 +16,9 @@ function PortfolioReq() {
                             return (<Preloading></Preloading>)
                     }
                     else if (response !== null) {
-                        const listPortfolio = response.data.data.portfolios.map((i)=>
+                        const listPortfolio = response.data.data.portfolios.map((i, index)=>
                             <PortfolioV2
+                                key = {index}
                                 header={i.header}
                                 description={i.description.html}
                                 ctaText={i.buttons[0]?.ctaText}
@@ -28,7 +29,6 @@ function PortfolioReq() {
                             ></PortfolioV2>
                         )
 
-                        console.log(response.data)
                         return(
                             <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 ">
                                 {listPortfolio}
