@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <div className="h-screen">
     <React.StrictMode>
-      <App />
+      <App className="App flex" />
     </React.StrictMode>
   </div>,
   document.getElementById('root')
