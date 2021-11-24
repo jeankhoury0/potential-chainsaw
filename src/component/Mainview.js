@@ -2,33 +2,17 @@ import Experience from "./utility/Experience";
 import { MainViewHeader } from "./utility/MainViewUtil";
 import ContactForm from "./utility/ContactForm";
 import { LanguageSkill, Skill, Skills } from "./utility/Skills";
-import PortfolioReq from "./requestComponent/PortfolioReq";
-import { Get } from 'react-axios'
-import Preloading from "./utility/Preloading";
+import { PortfolioV2 } from "./utility/Portfolio";
 
 
-function Mainview() {
+function Mainview(props) {
     return(
-        <div className="flex-grow">
-            < Get url= "https://api-ca-central-1.graphcms.com/v2/ckw9qwyik1p7b01xqbjr30d6h/master/?operationName=HomeExtraction&query=query%20HomeExtraction%20%7B%0A%20%20sidebar(where%3A%20%7Bid%3A%20%22ckwazrs083cvm0d22lqlodq2k%22%7D)%20%7B%0A%20%20%20%20name%0A%20%20%20%20jobTitle%0A%20%20%7D%0A%20%20experiences%20%7B%0A%20%20%20%20id%0A%20%20%20%20startDate%3A%20startYear%0A%20%20%20%20endDate%0A%20%20%20%20company%0A%20%20%20%20description%20%7B%0A%20%20%20%20%20%20html%0A%20%20%20%20%7D%0A%20%20%20%20jobTitle%0A%20%20%7D%0A%7D%0A" >
-            {(error, response, isLoading, makeRequest, axios) => {
-        if (error) {
-            return (<div className="bg-red-300 text-white"><button className="bg-secondAccent text-white p-2 mr-4" onClick={() => makeRequest({ params: { reload: true } })}>Refresh</button> Ops! An error occured 😞 - {error.message} </div>)
-        }
-        else if (isLoading) {
-            return (<Preloading></Preloading>)
-        }
-        else if (response !== null) {
-            console.log(response.data.data)
-            let data = response.data.data;
-            return (
-  
-                <div>
+        <div className="">  
                     <header className="lg:hidden  sticky top-0">
                         {/* Mobile only */}
                         <div className="text-center p-5 bg-grayAccent shadow-lg  text-secondAccent">
-                            <h1 className="text-2xl"> {data.sidebar.name} </h1>
-                            <h2 className="text-xl">{data.sidebar.jobTitle}</h2>
+                        <h1 className="text-2xl"> {props.res.sidebar.name} </h1>
+                        <h2 className="text-xl">{props.res.sidebar.jobTitle}</h2>
                         </div>
                     </header>
                     <main className="flex-grow">
@@ -40,17 +24,33 @@ function Mainview() {
                             </MainViewHeader>
 
                             <MainViewHeader title="Portfolio">
-                                <PortfolioReq></PortfolioReq>
+                                <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 justify-between">
+                            
+                                {props.res.portfolios.map((portfolio)=>
+                                    <PortfolioV2
+                                        key = {portfolio.id}
+                                        header= {portfolio.header}
+                                        description={portfolio.description.html}
+                                        ctaText={portfolio.buttons[0]?.ctaText}
+                                        src={portfolio?.image}
+                                        href={portfolio.buttons[0]?.ctaurl}
+                                        tags={portfolio.tags?.map((tag =>
+                                            [tag.title]))}
+                                        >
+                                    </PortfolioV2>
+                                    )}
+
+                                </div>
                             </MainViewHeader>
                             <MainViewHeader title="Experience">
-                                {data.experiences.map((xp)=>
+                            {props.res.experiences.map((xp)=>
                                     <Experience 
                                         key={xp}
                                         jobTitle={xp.jobTitle}
                                         companyName={xp.company}
-                                        startYear={xp.startDate}
+                                        startYear={xp.startYear}
+                                        endYear={xp.endYear}
                                         description={xp.description.html}
-                                        
                                     ></Experience>
                                 )}
                                 
@@ -60,8 +60,7 @@ function Mainview() {
                                 </div>
                             </MainViewHeader>
                             <MainViewHeader title="Skills" className="">
-                                <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 ">
-
+                        <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 justify-between">
                                     <Skills title="Web development" fa="fas fa-code">
                                         <Skill head>Web Frameworks</Skill>
                                         <Skill>Express.js, Django, React <i className="text-secondAccent hover:text-white fab fa-react"></i></Skill>
@@ -104,16 +103,8 @@ function Mainview() {
                         </div>
                     </main>
                 </div>
+
             )
-
-        }
-
-        return (<Preloading></Preloading>)
-    }
-}
-                
-            </Get >
-        </div > )
 }
 
 export default Mainview;
