@@ -10,7 +10,7 @@ function Sidebar(props) {
                         <source srcSet={data.sidebar.image.webp} type="image/webp"></source>
                         <img src={data.sidebar.image.png} alt="" className="filter drop-shadow-lg ring-2 ring-secondAccent rounded-md w-min-1/3"></img>
                         </picture>
-                    <h1 className="text-3xl text-grayAccent font-bold uppercase mt-3"> {data.sidebar.name} </h1>
+                    <h1 className="text-2xl text-grayAccent font-bold uppercase mt-3" style={{ fontFamily: "Montserrat" }}> {data.sidebar.name} </h1>
                     <h2 className="text-xl font-medium">{data.sidebar.jobTitle}</h2>
                     </div>
                     <div className="bg-white rounded-md  mt-7 m-3 p-3">

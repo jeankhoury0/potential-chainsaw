@@ -12,11 +12,22 @@ module.exports = {
           creme: '#D8C3A4',
           whiteoff: '#EAE8DC',
           linkedin: '#0073b1',
+      },
+      minHeight: {
+        '2.5': '2.5em',
+        '3.5': '3.5em',
+        '4.5': '4.5em',
+        '5.5': '5.5em',
+
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'mont': ['Montserrat', 'Helvetica', 'Arial', 'sans-serif']
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
