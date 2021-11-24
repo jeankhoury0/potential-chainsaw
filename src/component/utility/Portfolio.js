@@ -9,6 +9,7 @@ function Portfolio(props) {
     }
 
     return (
+        <div class="bg-gray-900 pl-3">
         <div class="md:p-10 flex flex-col h-full">
             <div className="max-w-sm rounded overflow-hidden shadow-lg ">
                 <img src={props.src} className={`${noImage} w-full shadow-sm `} alt={props.alt || ""}></img>
@@ -24,6 +25,7 @@ function Portfolio(props) {
                 </div>
 
             </div>
+        </div>
         </div>
 
     )
@@ -47,15 +49,15 @@ export function PortfolioV2(props){
     }
 
     return(
-        <div className="group rounded shadow-lg hover:bg-secondAccent transition-colors duration-500">
-            <h3 className="font-bold text-xl px-6 pt-2 group-hover:text-white duration-500"> {props.header}</h3>
+        <div className="group rounded shadow-xl ring-4 ring-gray-200 hover:bg-secondAccent transition-colors duration-500 ">
+            <h3 className="font-bold text-xl px-6 pt-2 group-hover:text-white duration-500 capitalize "> {props.header}</h3>
             <div className="py-2 px-6">
-                <picture >
-                    <source srcSet={props.src?.webp} type="image/webp"></source>
-                    <img src={props.src?.png} alt={props.alt || ""} className={`${noImage} w-full p-2 group-hover:bg-gray-200`}></img>
-                </picture>
-                <div className="py-2 px-5  group-hover:text-white"> 
-                    <div dangerouslySetInnerHTML={{ __html: props.description}}>
+                    <picture>
+                        <source srcSet={props.src?.webp} type="image/webp"></source>
+                        <img src={props.src?.png} alt={props.alt || ""} className={`${noImage} transform w-full p-2 group-hover:bg-gray-200 `}></img>
+                    </picture>                
+                <div className="py-2 px-5  group-hover:text-white first-letter:capitalize"> 
+                    <div dangerouslySetInnerHTML={{ __html: props.description }} className="lg:min-h-3.5">
                     </div> 
                 </div>
                 <div className="py-2">

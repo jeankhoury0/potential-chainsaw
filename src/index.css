@@ -2,12 +2,18 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@font-face {
+    font-family: Montserrat;
+    src:url(https://fonts.google.com/specimen/Montserrat);
+}
+
 @layer base{
     input, textarea{
         @apply border ring-secondAccent rounded-sm ring-2 focus:outline-none focus:ring-2 focus:ring-secondAccent focus:border-transparent h-9 text-secondAccent
     }
+
     h3 {
-        @apply text-xl font-medium
+        @apply text-xl font-medium;
     }
     p a{
         @apply font-bold underline hover:text-mainAccent

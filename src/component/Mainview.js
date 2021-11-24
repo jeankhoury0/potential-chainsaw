@@ -63,7 +63,7 @@ function Mainview(props) {
                         <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 justify-between">
                                     <Skills title="Web development" fa="fas fa-code">
                                         <Skill head>Web Frameworks</Skill>
-                                        <Skill>Express.js, Django, React <i className="text-secondAccent hover:text-white fab fa-react"></i></Skill>
+                                <Skill>Express.js <i className="text-secondAccent hover:text-white fab fa-node-js"></i>, React <i className="text-secondAccent hover:text-white fab fa-react"></i></Skill>
                                         <Skill head>Templating languages</Skill>
                                         <Skill>EJS</Skill>
                                         <Skill head>Testing framework</Skill>
