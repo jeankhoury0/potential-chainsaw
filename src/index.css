@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @font-face {
-    font-family: Montserrat;
+    font-family: Montserrat, Arial;
     src:url(https://fonts.google.com/specimen/Montserrat);
 }
 

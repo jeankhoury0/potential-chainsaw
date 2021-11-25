@@ -1,8 +1,8 @@
 
 export function Skills(props){
     return(
-        <div className="rounded shadow-xl ring-4 ring-gray-200 ">
-            <div className="duration-500 min-h-full group p-6 max-w-sm rounded overflow-hidden shadow text-center hover:bg-secondAccent hover:shadow-xl transition-colors">
+        <div className="duration-500 group rounded shadow-xl min-h-full ring-4 ring-gray-200 hover:bg-secondAccent hover:shadow-xl transition-colors">
+            <div className="  p-6  rounded overflow-hidden text-center ">
                 <i className={`text-secondAccent text-3xl  ${props.fa} group-hover:text-white`}></i>
                 <div className ="px-6 py-4">
                     <h3 className="font-bold text-xl mb-2 group-hover:text-white">{props.title}</h3>

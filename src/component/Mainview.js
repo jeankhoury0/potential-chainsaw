@@ -1,8 +1,9 @@
 import Experience from "./utility/Experience";
 import { MainViewHeader } from "./utility/MainViewUtil";
-import ContactForm from "./utility/ContactForm";
 import { LanguageSkill, Skill, Skills } from "./utility/Skills";
 import { PortfolioV2 } from "./utility/Portfolio";
+import Education from "./utility/Education";
+import FormContact from "./utility/FormContact";
 
 
 function Mainview(props) {
@@ -90,15 +91,10 @@ function Mainview(props) {
                                 </div>
                             </MainViewHeader>
                             <MainViewHeader title="Education">
-                                <Experience
-                                    jobTitle="Bachelor (B. Sc.) Computer science"
-                                    companyName="Université de Montréal"
-                                    startYear="2020"
-                                    endYear="2023"
-                                ></Experience>
+                                <Education></Education>
                             </MainViewHeader>
                             <MainViewHeader title="contact me" idName="contact">
-                                <ContactForm></ContactForm>
+                                <FormContact></FormContact>
                             </MainViewHeader>
                         </div>
                     </main>
