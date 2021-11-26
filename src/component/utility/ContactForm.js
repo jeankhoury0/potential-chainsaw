@@ -1,3 +1,7 @@
+/**
+ * @deprecated
+ */
+
 import { useForm, ValidationError } from '@formspree/react';
 function ContactForm() {
     const [state, handleSubmit] = useForm("xwkagdop");
