@@ -11,7 +11,7 @@ function Mainview(props) {
         <div className="">  
                     <header className="lg:hidden  sticky top-0">
                         {/* Mobile only */}
-                        <div className="text-center p-5 bg-grayAccent shadow-lg  text-secondAccent">
+                        <div className="text-center p-5 bg-grayAccent shadow-lg  text-secondAccent z-10">
                         <h1 className="text-2xl"> {props.res.sidebar.name} </h1>
                         <h2 className="text-xl">{props.res.sidebar.jobTitle}</h2>
                         </div>

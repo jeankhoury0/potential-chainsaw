@@ -54,7 +54,7 @@ export function PortfolioV2(props){
             <div className="py-2 px-6">
                     <picture>
                         <source srcSet={props.src?.webp} type="image/webp"></source>
-                        <img src={props.src?.png} alt={props.alt || ""} className={`${noImage} transform w-full p-2 group-hover:bg-gray-200 `}></img>
+                        <img src={props.src?.png} alt={props.alt || ""} className={`${noImage} w-full p-2 group-hover:bg-gray-200`}></img>
                     </picture>                
                 <div className="py-2 px-5  group-hover:text-white first-letter:capitalize"> 
                     <div dangerouslySetInnerHTML={{ __html: props.description }} className="lg:min-h-3.5">
