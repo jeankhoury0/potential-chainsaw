@@ -20,7 +20,7 @@ function App() {
           let data = response.data.data;
           return(
             <div className="flex">
-              <aside className="h-screen sticky top-0  w-1/3 flex-col hidden lg:block bg-gradient-to-l from-secondAccent to-secondAccAccent">
+              <aside className="sidebar   ">
                 <div className=" text-left">
                   <Sidebar res={data} ></Sidebar>
                 </div>
