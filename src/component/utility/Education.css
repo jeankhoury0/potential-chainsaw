@@ -1,28 +1,28 @@
-:root{
-            --dark-color: #17242A;
-            --light-color: #3AAFA9;
-        }
+:root {
+  --dark-color: #17242a;
+  --light-color: #3aafa9;
+}
 
-        svg {
-            cursor: pointer;
-        }
-        #dark{
-            fill: var(--dark-color);
-            opacity: 0;
-        }
-        #light{
-            fill: var(--light-color);
-        }
+svg {
+  cursor: pointer;
+}
+#dark {
+  fill: var(--dark-color);
+  opacity: 0;
+}
+#light {
+  fill: var(--light-color);
+}
 
-        #dark,
-        #light{
-                transition: all 1s ease-out;
-        }
+#dark,
+#light {
+  transition: all 1s ease-out;
+}
 
-        svg:hover #dark{
-            opacity: 1;
-            transform: translate(-10px);
-        }
-         svg:hover #light{
-            opacity: 0.8;
-        }
+svg:hover #dark {
+  opacity: 1;
+  transform: translate(-10px);
+}
+svg:hover #light {
+  opacity: 0.8;
+}
