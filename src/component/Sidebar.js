@@ -6,9 +6,9 @@ function Sidebar(props) {
     <div>
       <div className="text-center bg-white rounded-md shadow-lg m-3 mt-4 p-3 text-secondAccent">
         <picture>
-          <source srcSet={data.sidebar.image.webp} type="image/webp"></source>
+          <source srcSet={data.sidebar.image?.webp} type="image/webp"></source>
           <img
-            src={data.sidebar.image.png}
+            src={data.sidebar.image?.png}
             alt=""
             className="filter drop-shadow-lg  rounded-md w-min-1/3"
           ></img>
