@@ -29,43 +29,6 @@ function Mainview(props) {
             </p>
           </MainViewHeader>
 
-          <MainViewHeader title="Portfolio">
-            <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 justify-between">
-              {props.res.portfolios.map((portfolio) => (
-                <PortfolioV2
-                  key={portfolio.id}
-                  header={portfolio.header}
-                  description={portfolio.description.html}
-                  ctaText={portfolio.buttons[0]?.ctaText}
-                  src={portfolio?.image}
-                  href={portfolio.buttons[0]?.ctaurl}
-                  tags={portfolio.tags?.map((tag) => [tag.title])}
-                ></PortfolioV2>
-              ))}
-            </div>
-          </MainViewHeader>
-          <MainViewHeader title="Experience">
-            {props.res.experiences.map((xp) => (
-              <Experience
-                key={xp}
-                jobTitle={xp.jobTitle}
-                companyName={xp.company}
-                startYear={xp.startYear}
-                endYear={xp.endYear}
-                description={xp.description.html}
-              ></Experience>
-            ))}
-
-            <div className="w-44 p-3 bg-linkedin text-white rounded  text-center mt-2 transition duration-500 ease-in-out hover:bg-mainAccent ">
-              <a
-                href="https://www.linkedin.com/in/jeank/?locale=en_US"
-                className=""
-              >
-                {" "}
-                View more on <i className="fab fa-linkedin"></i>
-              </a>
-            </div>
-          </MainViewHeader>
           <MainViewHeader title="Skills" className="">
             <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 justify-between">
               <Skills title="Web development" fa="fas fa-code">
@@ -107,6 +70,46 @@ function Mainview(props) {
               </Skills>
             </div>
           </MainViewHeader>
+
+          <MainViewHeader title="Experience">
+            {props.res.experiences.map((xp) => (
+              <Experience
+                key={xp}
+                jobTitle={xp.jobTitle}
+                companyName={xp.company}
+                startYear={xp.startYear}
+                endYear={xp.endYear}
+                description={xp.description.html}
+              ></Experience>
+            ))}
+
+            <div className="w-44 p-3 bg-linkedin text-white rounded  text-center mt-2 transition duration-500 ease-in-out hover:bg-mainAccent ">
+              <a
+                href="https://www.linkedin.com/in/jeank/?locale=en_US"
+                className=""
+              >
+                {" "}
+                View more on <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </MainViewHeader>
+
+          <MainViewHeader title="Portfolio">
+            <div className="container grid grid-cols-1 sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 justify-between">
+              {props.res.portfolios.map((portfolio) => (
+                <PortfolioV2
+                  key={portfolio.id}
+                  header={portfolio.header}
+                  description={portfolio.description.html}
+                  ctaText={portfolio.buttons[0]?.ctaText}
+                  src={portfolio?.image}
+                  href={portfolio.buttons[0]?.ctaurl}
+                  tags={portfolio.tags?.map((tag) => [tag.title])}
+                ></PortfolioV2>
+              ))}
+            </div>
+          </MainViewHeader>
+
           <MainViewHeader title="Education">
             <Education></Education>
           </MainViewHeader>
