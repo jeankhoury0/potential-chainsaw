@@ -80,7 +80,7 @@ export function PortfolioV2(props) {
             href={props.href}
             rel="noreferrer"
             target="_blank"
-            className={`${noCTAText} flex p-3 text-center bg-secondAccent text-white hover:bg-mainAccent group-hover:bg-mainAccent transition-colors duration-200 rounded font-semibold`}
+            className={`${noCTAText} flex p-3 text-center bg-secondAccent text-white hover:bg-mainAccent group-hover:bg-yellowAccent group-hover:text-mainAccent transition-colors duration-200 rounded font-semibold`}
           >
             {props.ctaText}
           </a>
