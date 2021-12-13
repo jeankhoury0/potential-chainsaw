@@ -31,7 +31,7 @@ function Sidebar(props) {
       </div>
 
       <a href="./cv.pdf" target="_blank" rel="noreferrer">
-        <div className="bg-white rounded-md mt-7 m-3 p-3 group shadow-lg text-center text-secondAccent underline font-medium hover:bg-grayAccent ">
+        <div className="bg-white rounded-md mt-7 m-3 p-3 group shadow-lg text-center text-secondAccent underline font-medium hover:bg-yellowAccent ">
           <i className="fas fa-file-pdf text-mainAccent group-hover:text-secondAccent transition-colors mr-3"></i>
           View my CV
         </div>

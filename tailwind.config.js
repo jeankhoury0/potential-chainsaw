@@ -5,13 +5,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        mainAccent: "#406576",
-        secondAccent: "#268187",
-        secondAccAccent: "#349d98",
+        mainAccent: "#32445C",
+        secondAccent: "#32445C",
+        secondAccAccent: "#ffff",
         grayAccent: "#17242A",
         creme: "#D8C3A4",
         whiteoff: "#EAE8DC",
         linkedin: "#0073b1",
+        yellowAccent: "#DCD764",
       },
       minHeight: {
         2.5: "2.5em",

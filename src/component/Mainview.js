@@ -35,9 +35,9 @@ function Mainview(props) {
                 <Skill head>Web Frameworks</Skill>
                 <Skill>
                   Express.js{" "}
-                  <i className="text-secondAccent hover:text-white fab fa-node-js"></i>
+                  <i className="text-secondAccent group-hover:text-yellowAccent fab fa-node-js"></i>
                   , React{" "}
-                  <i className="text-secondAccent hover:text-white fab fa-react"></i>
+                  <i className="text-secondAccent group-hover:text-yellowAccent fab fa-react"></i>
                 </Skill>
                 <Skill head>Templating languages</Skill>
                 <Skill>EJS</Skill>
