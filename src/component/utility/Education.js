@@ -1,5 +1,5 @@
 import "./Education.css";
-import Experience from "./Experience";
+import Experience from "./experience/Experience";
 
 function Education() {
   return (
