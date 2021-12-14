@@ -1,5 +1,5 @@
 import Education from "./utility/Education";
-import Experience from "./utility/Experience";
+import Experience from "./utility/experience/Experience";
 import FormContact from "./utility/FormContact";
 import { MainViewHeader } from "./utility/MainViewUtil";
 import { PortfolioV2 } from "./utility/Portfolio";

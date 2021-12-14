@@ -1,10 +1,21 @@
-import { SocialLink } from "./utility/SocialLinks";
+import {SocialLink,
+} from './utility/SocialLinks';
+import React from 'react';
 
+
+/**
+ * Sidebar function 
+ * @param {*} props
+ * @returns Sidebar component
+ */
 function Sidebar(props) {
-  let data = props.res;
+  const data = props.res;
   return (
     <div>
-      <div className="text-center bg-white rounded-md shadow-lg m-3 mt-4 p-3 text-secondAccent">
+      <div
+        className="text-center bg-white rounded-md shadow-lg
+      m-3 mt-4 p-3 text-secondAccent"
+      >
         <picture>
           <source srcSet={data.sidebar.image?.webp} type="image/webp"></source>
           <img
@@ -31,7 +42,10 @@ function Sidebar(props) {
       </div>
 
       <a href="./cv.pdf" target="_blank" rel="noreferrer">
-        <div className="bg-white rounded-md mt-7 m-3 p-3 group shadow-lg text-center text-secondAccent underline font-medium hover:bg-yellowAccent ">
+        <div
+          className="bg-white rounded-md mt-7 m-3 p-3 group shadow-lg text-center text-secondAccent 
+        underline font-medium hover:bg-yellowAccent "
+        >
           <i className="fas fa-file-pdf text-mainAccent group-hover:text-secondAccent transition-colors mr-3"></i>
           View my CV
         </div>
