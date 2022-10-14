@@ -81,7 +81,7 @@ function Mainview(props) {
                 endYear={xp.endYear}
                 description={xp.description.html}
               ></Experience>
-            ))}
+            )).reverse()}
 
             <div className="w-44 p-3 bg-linkedin text-white rounded  text-center mt-2 transition duration-500 ease-in-out hover:bg-mainAccent ">
               <a
