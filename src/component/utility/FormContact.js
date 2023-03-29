@@ -64,6 +64,7 @@ function FormContact() {
       >
         Send
       </button>
+      <div data-netlify-recaptcha="true"></div>
     </form>
   );
 }
