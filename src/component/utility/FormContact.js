@@ -5,6 +5,9 @@ function FormContact() {
       name="contact"
       method="POST"
       action="/contact"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
+
     >
       <input type="hidden" name="form-name" value="contact"></input>
       <div className="flex flex-wrap -mx-3 mb-6">
