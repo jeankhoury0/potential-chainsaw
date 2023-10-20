@@ -6,6 +6,7 @@ import { PortfolioV2 } from "./utility/portfolio/Portfolio";
 import { LanguageSkill, Skill, Skills } from "./utility/Skills";
 
 function Mainview(props) {
+  console.log(props.res.mainContentComponent.aboutMe.html);
   return (
     <div className="">
       <header className="lg:hidden  sticky top-0">
@@ -18,15 +19,12 @@ function Mainview(props) {
       <main className="flex-grow">
         <div>
           <MainViewHeader title="About Me">
-            <p className=" text-justify">
-              {" "}
-              2nd-year Computer science student, experienced Quality Insurance
-              specialist in Accessibility audit (WCAG) and user acceptance
-              testing. Able to adapt and overcome technical and analytical
-              challenges thanks to my knowledge of programming, math, and
-              business administration. Highly interested in computer science and
-              new technologies.
-            </p>
+            <p
+              className="text-justify"
+              dangerouslySetInnerHTML={{
+                __html: props.res.mainContentComponent.aboutMe.html,
+              }}
+            ></p>
           </MainViewHeader>
 
           <MainViewHeader title="Skills" className="">
@@ -72,16 +70,18 @@ function Mainview(props) {
           </MainViewHeader>
 
           <MainViewHeader title="Experience">
-            {props.res.experiences.map((xp) => (
-              <Experience
-                key={xp}
-                jobTitle={xp.jobTitle}
-                companyName={xp.company}
-                startYear={xp.startYear}
-                endYear={xp.endYear}
-                description={xp.description.html}
-              ></Experience>
-            )).reverse()}
+            {props.res.experiences
+              .map((xp) => (
+                <Experience
+                  key={xp}
+                  jobTitle={xp.jobTitle}
+                  companyName={xp.company}
+                  startYear={xp.startYear}
+                  endYear={xp.endYear}
+                  description={xp.description.html}
+                ></Experience>
+              ))
+              .reverse()}
 
             <div className="w-44 p-3 bg-linkedin text-white rounded  text-center mt-2 transition duration-500 ease-in-out hover:bg-mainAccent ">
               <a
@@ -111,7 +111,18 @@ function Mainview(props) {
           </MainViewHeader>
 
           <MainViewHeader title="Education">
-            <Education></Education>
+            {props.res.educations
+              .map((xp) => (
+                <Education
+                  key={xp}
+                  jobTitle={xp.jobTitle}
+                  companyName={xp.company}
+                  startYear={xp.startYear}
+                  endYear={xp.endYear}
+                  description={xp.description.html}
+                ></Education>
+              ))
+              .reverse()}
           </MainViewHeader>
           <MainViewHeader title="contact me" idName="contact">
             <FormContact></FormContact>
